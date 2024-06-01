@@ -94,6 +94,7 @@ function generateDefinitionFile(
                     break;
             }
         }
+        prop.name = `'${prop.name}'`;
         if (prop.kind === "PRIMITIVE") {
             // e.g. string
             definitionProperties.push(createProperty(prop.name, prop.type, prop.description, prop.isArray));
